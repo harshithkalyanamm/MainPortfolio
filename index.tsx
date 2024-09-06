@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Loader from "../components/Loader";
+
 import SocialIcons from "../components/SocialIcons";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
@@ -39,7 +39,7 @@ function Index() {
           <Footer />
         </>
       )}
-      <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
+      
     </div>
   );
 }
