@@ -1,0 +1,101 @@
+.contact {
+  max-width: 700px;
+  margin: 15rem auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  form label{
+    font-family: var(--raleway);
+
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--tlarge);
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    margin-bottom: 1rem; 
+    margin-top:1rem;
+    background: var(--theme-color);
+    border-box:   bold 2px solid
+    #8892b0;
+    
+  }
+
+  form textarea{
+    min-height:150px;
+  }
+   form input, form textarea {
+    color: var(--theme-color);
+    padding: 0.75em 1em;
+    border: 1px solid var(--theme-color);
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: var(--tsm);
+    outline: none;
+    resize: vertical; /* Allows resizing vertically only */
+    width: 100%;
+    
+    &:hover,
+    &:focus {
+      background-color: var(--lightest-navy);
+      border-color: var(--lightest-navy); /* Optional: change border color on hover/focus */
+    }
+  }
+
+  
+  
+
+  @media screen and (max-width: 600px) {
+    form input, form textarea {
+      width: 90%;
+      padding: 0.75rem;
+      font-size: var(--tsm);
+    }
+  }
+
+  .contact-title {
+    color: var(--theme-color);
+    font-size: var(--txlarge);
+    font-family: var(--fira-code);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    &::before {
+      counter-increment: title;
+      content: "0" counter(title) ".";
+      margin-right: 0.5rem;
+      color: var(--theme-color);
+    }
+  }
+
+  .contact-sub-title {
+    font-size: var(--tgiant);
+    font-family: var(--raleway);
+    color: var(--light-slate);
+    margin-bottom: 2rem; /* Increase gap between subtitle and text */
+  }
+
+  .contact-text {
+    color: var(--slate);
+    font-size: var(--tlarge);
+    letter-spacing: 0.07rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    font-family: var(--raleway);
+    text-align: center;
+    margin-bottom: 2.5rem; /* Increase gap between text and input fields */
+  }
+
+  .contact-cta {
+    margin-top: 2.5rem;
+    .btn {
+      padding: 1.5rem 3rem;
+    }
+  }
+}
+
